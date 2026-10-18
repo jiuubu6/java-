@@ -1,0 +1,142 @@
+# Java 初学入门代码
+
+> 
+> 前提：安装 JDK + 配置环境变量，使用记事本 / VSCode/IDEA 都可以运行。
+
+## 1. 第一个程序：HelloWorld（必学）
+
+文件名必须是 `HelloWorld.java`，**类名和文件名一致**
+
+```
+public class HelloWorld {
+    // main方法：程序入口
+    public static void main(String[] args) {
+        // 打印输出语句
+        System.out.println("Hello Java！");
+    }
+}
+```
+
+### 运行步骤
+
+1. 编译：`javac HelloWorld.java` → 生成 `HelloWorld.class`
+2. 运行：`java HelloWorld`
+
+---
+
+## 2. 变量 & 数据类型
+
+```
+public class VarDemo {
+    public static void main(String[] args) {
+        // 整数
+        int age = 18;
+        // 小数
+        double score = 95.5;
+        // 字符，单引号
+        char ch = 'A';
+        // 布尔
+        boolean flag = true;
+        // 字符串，双引号
+        String name = "小明";
+
+        System.out.println("姓名：" + name);
+        System.out.println("年龄：" + age);
+        System.out.println("分数：" + score);
+    }
+}
+```
+
+---
+
+## 3. 键盘输入（需要导入 Scanner）
+
+```
+import java.util.Scanner;
+
+public class InputDemo {
+    public static void main(String[] args) {
+        // 创建扫描器对象
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("请输入数字：");
+        int num = sc.nextInt();
+        System.out.println("你输入的是：" + num);
+
+        sc.close(); // 关闭输入
+    }
+}
+```
+
+---
+
+## 4. if 判断语句
+
+```
+public class IfDemo {
+    public static void main(String[] args) {
+        int score = 78;
+        if (score >= 60) {
+            System.out.println("及格");
+        } else {
+            System.out.println("不及格");
+        }
+    }
+}
+```
+
+## 5. for 循环（打印 1~10）
+
+```
+public class ForDemo {
+    public static void main(String[] args) {
+        for(int i = 1; i <= 10; i++){
+            System.out.println(i);
+        }
+    }
+}
+```
+
+## 6. 数组基础
+
+```
+public class ArrayDemo {
+    public static void main(String[] args) {
+        int[] arr = {10,20,30,40};
+        // 遍历数组
+        for(int i = 0; i < arr.length; i++){
+            System.out.println(arr[i]);
+        }
+    }
+}
+```
+
+## 7. 简单方法（函数）
+
+```
+public class MethodDemo {
+    public static void main(String[] args) {
+        int sum = add(3,5);
+        System.out.println(sum);
+    }
+
+    // 定义一个求和方法
+    public static int add(int a, int b){
+        return a + b;
+    }
+}
+```
+
+---
+
+### Java 基础语法小提示
+
+1. 区分大小写；
+2. 语句末尾必须写分号 `;`
+3. `{}` 成对写；
+4. `main` 是程序唯一入口，格式固定：`public static void main(String[] args)`
+
+你想要：
+
+- 带详细注释版本？
+- 还是练习题（比如计算器、猜数字小游戏）？
